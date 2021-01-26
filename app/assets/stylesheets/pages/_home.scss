@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+
+.home-title {
+  color: $primary;
+  margin: 2rem 0 2rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.cocktail-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}

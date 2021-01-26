@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Pages
+
+h1 {
+  color: $primary;
+  margin: 2rem 0 2rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+}

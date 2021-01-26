@@ -1,3 +1,5 @@
-<h1>Cocktails#new</h1>
-<%= render 'form', locals: { cocktail: @cocktail } %>
-<%= link_to 'Back to list', cocktails_path %>
+<div class="container">
+  <h1>New cocktail</h1>
+  <%= render 'form', locals: { cocktail: @cocktail } %>
+  <%= link_to 'Back to list', cocktails_path, class: 'btn btn-outline-primary mt-2' %>
+</div>
