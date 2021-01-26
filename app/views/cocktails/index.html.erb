@@ -6,6 +6,7 @@
       <div class="cocktail-card">
         <div class="card-title"><%= cocktail.name %></div>
         <%= link_to 'More info', cocktail_path(cocktail), class: 'btn btn-primary' %>
+        <%= link_to 'Edit', edit_cocktail_path(cocktail), class: 'btn btn-outline-primary' %>
       </div>
     <% end %>
   </div>

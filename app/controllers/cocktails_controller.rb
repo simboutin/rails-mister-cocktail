@@ -1,4 +1,6 @@
 class CocktailsController < ApplicationController
+  before_action :set_cocktail, only: [:show, :edit, :update]
+
   def index
     @cocktails = Cocktail.all
   end
@@ -21,7 +23,21 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @cocktail.update(params_cocktail)
+      redirect_to cocktail_path(@cocktail)
+    else
+      render :edit
+    end
+  end
+
   private
+
+  def set_cocktail
+    @cocktail = Cocktail.find(params[:id])
+  end
 
   def params_cocktail
     params.require(:cocktail).permit(:name, :photo)
