@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>New dose</h1>
-  <h3>'<%= @cocktail.name %>'</h3>
-  <%= render 'form', locals: { cocktail: @cocktail, dose: @dose } %>
-  <%= link_to 'Back to cocktail', cocktail_path(@cocktail), class: 'btn btn-outline-primary' %><br>
-  <%= link_to 'Back to list', cocktails_path, class: 'btn btn-outline-primary mt-2' %>
+  <div class="default-card form-card">
+    <h1 class="mb-3">New dose for '<%= @cocktail.name %>'</h1>
+    <%= render 'form', locals: { cocktail: @cocktail, dose: @dose } %>
+    <%= link_to 'Back to cocktail', cocktail_path(@cocktail), class: 'btn btn-outline-primary' %>
+  </div>
 </div>

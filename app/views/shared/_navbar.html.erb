@@ -1,11 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg fixed-top <%= 'navbar-home' if @homepage %> <%= 'navbar-white' unless @homepage %>"> 
   <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <%= link_to 'Cocktails', root_path, class: 'navbar-brand' %>
+    <% 
+      navbar_brand_class_home = @homepage ? 'navbar-brand-was-white' : 'navbar-brand-was-primary'
+      navbar_brand_class = "navbar-brand-was #{navbar_brand_class_home}"
+    %>
+    <%= link_to 'Worth a shot', root_path, id: 'navbar-brand', class: navbar_brand_class %>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <%# <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -17,11 +21,11 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul> %>
-      <form class="form-inline my-2 my-lg-0">
+      <%# <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-primary my-2 my-sm-0 mr-2" type="submit">Search</button>
-      </form>
-      <%= link_to 'Create a cocktail', new_cocktail_path, class: 'btn btn-outline-secondary' %>
+      </form> %>
+      <%= link_to 'Create a cocktail', new_cocktail_path, id: 'btn-add-cocktail', class: @homepage ? 'btn btn-outline-secondary' : 'btn btn-outline-primary' %>
     </div>
   </div>
 </nav>

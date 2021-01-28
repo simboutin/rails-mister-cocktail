@@ -1,0 +1,4 @@
+<%= form_with url: "/cocktails/search", method: :get, class: "search-bar" do |form| %>
+  <input class="form-control mr-sm-2" type="search" placeholder="Search by name or ingredients" aria-label="Search" name="keyword" id="search-input">
+  <button class="btn btn-primary my-2 my-sm-0 mr-2" type="submit"><i class="fas fa-search"></i></button>
+<% end %>

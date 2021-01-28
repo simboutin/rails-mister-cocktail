@@ -2,6 +2,7 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update]
 
   def index
+    @homepage = true
     @cocktails = Cocktail.all
   end
 
@@ -31,6 +32,19 @@ class CocktailsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def search
+    if params[:keyword].present?
+      sql_query = " \
+        cocktails.name ILIKE :keyword \
+        OR ingredients.name ILIKE :keyword \
+      "
+      @cocktails = Cocktail.joins(:ingredients).distinct.where(sql_query, keyword: "%#{params[:keyword]}%")
+    else
+      @cocktails = Cocktail.all
+    end
+    # @cocktails = Cocktail.where('name ILIKE ?', "%#{params[:keyword]}%")
   end
 
   private

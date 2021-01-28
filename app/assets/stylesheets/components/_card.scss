@@ -1,6 +1,38 @@
-.cocktail-card {
-  background-color: white;
+.default-card {
+  background-color: $white;
   padding: 2rem;
   border-radius: $border-radius;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cocktail-card {
+  color: white;
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+}
+
+.cocktail-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 29px $primary,
+  -1px -1px 0 $primary,
+}
+
+.cocktail-show-card {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.form-card {
+  width: 100%;
+  margin: 3rem auto;
+}
+
+@media (min-width: 1024px) {
+  .form-card {
+    width: 50%;
+  }
 }

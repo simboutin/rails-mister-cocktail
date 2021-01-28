@@ -1,12 +1,31 @@
 .navbar {
   justify-content: space-between;
-  background: white;
+  transition: 0.3s background-color ease;
+}
+
+.navbar-home {
+  background-color: transparent;
+}
+
+.navbar-white {
+  background-color: $white;
 }
 
 .navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar .navbar-brand img {
-  width: 40px;
+.navbar-brand-was {
+  font-size: 1.3rem;
+}
+
+.navbar-brand-was-primary {
+  color: $primary;
+}
+
+.navbar-brand-was-white {
+  color: $white;
+  &:hover {
+    color: $white;
+  }
 }

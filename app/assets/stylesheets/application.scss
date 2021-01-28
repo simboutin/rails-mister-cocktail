@@ -16,7 +16,28 @@
 
 h1 {
   color: $primary;
-  margin: 2rem 0 2rem 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
+}
+
+h3 {
+  color: $primary;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-outline-secondary:hover {
+  color: $primary;
+}
+
+.pages {
+  padding-top: 5rem;
+  margin-bottom: 3rem;
 }
