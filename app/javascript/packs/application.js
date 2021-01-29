@@ -10,6 +10,9 @@ import "channels"
 
 import 'bootstrap';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { selectRating } from '../components/rating';
+import { initSelect2 } from '../plugins/init_select2';
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 Rails.start()
 Turbolinks.start()
@@ -18,4 +21,15 @@ ActiveStorage.start()
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
+  selectRating();
+  initSelect2();
+  initSweetalert('.btn-delete', {
+    title: 'Are you sure?',
+    text: "The ingredient will be permanently deleted !",
+    icon: 'warning',
+    buttons: {
+      cancel: true,
+      confirm: true,
+    },
+  });
 });

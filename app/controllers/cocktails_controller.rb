@@ -12,6 +12,7 @@ class CocktailsController < ApplicationController
   end
 
   def new
+    @btn_create_cocktail_disabled = true
     @cocktail = Cocktail.new
   end
 

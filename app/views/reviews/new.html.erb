@@ -1,7 +1,7 @@
 <div class="container">
   <div class="default-card form-card">
-    <h1 class="mb-3">Add a new ingredient</h1>
-
+    <h1 class="mb-3">Add a new review</h1>
+    
     <div class="cocktail-recall">
       <% if @cocktail.photo.attached? %>
         <div class="cocktail-recall-img">
@@ -15,7 +15,7 @@
 
     <hr>
 
-    <%= render 'form', locals: { cocktail: @cocktail, dose: @dose } %>
+    <%= render 'form', locals: { cocktail: @cocktail, review: @review } %>
     <%= link_to 'Back to cocktail', cocktail_path(@cocktail), class: 'btn btn-outline-primary' %>
   </div>
 </div>

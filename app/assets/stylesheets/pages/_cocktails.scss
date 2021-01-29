@@ -2,11 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.cocktail-img {
-  width: 300px;
+.cocktail-reviews {
+  margin-top: 2rem;
 }
 
-.cocktail-ingredients ul {
-  padding-left: 0;
-  list-style: none;
+.cocktail-review {
+  margin-top: 1rem;
+}
+
+.cocktail-review-header {
+  display: flex;
+}
+
+.cocktail-review-header {
+  display: flex;
+}
+
+.cocktail-review-header-title {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.cocktail-review-date {
+  color: $mid-gray;
 }

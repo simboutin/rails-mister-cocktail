@@ -25,7 +25,9 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-primary my-2 my-sm-0 mr-2" type="submit">Search</button>
       </form> %>
-      <%= link_to 'Create a cocktail', new_cocktail_path, id: 'btn-add-cocktail', class: @homepage ? 'btn btn-outline-secondary' : 'btn btn-outline-primary' %>
+      <% unless @btn_create_cocktail_disabled %>
+        <%= link_to 'Create a cocktail', new_cocktail_path, id: 'btn-add-cocktail', class: @homepage ? 'btn btn-outline-secondary' : 'btn btn-outline-primary' %>
+      <% end  %>
     </div>
   </div>
 </nav>
